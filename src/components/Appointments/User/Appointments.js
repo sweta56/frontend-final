@@ -15,14 +15,14 @@ const Appointments = () => {
 
     async function userData(){
             const request = await fetcher("appointments/", "GET",token)
-            console.log("yo appointments in total",request);
+            const {_id} = jwtDecode(localStorage.getItem('token'));
 
             request.appointments.pending.filter ( data => console.log("id check ", data.patient._id))
-            const resPendings= request.appointments.pending.filter(data=> data.patient._id == "6368b7683fa7e70ce0f036bd")
+            const resPendings= request.appointments.pending.filter(data=> data.patient._id == _id)
             console.log("user res pending ",resPendings)
 
-            const resAccepted= request.appointments.accepted.filter((data)=>data.patient._id == "6368b7683fa7e70ce0f036bd")
-            const resRejected= request.appointments.rejected.filter((data)=>data.patient._id == "6368b7683fa7e70ce0f036bd")
+            const resAccepted= request.appointments.accepted.filter((data)=>data.patient._id == _id)
+            const resRejected= request.appointments.rejected.filter((data)=>data.patient._id == _id)
             setPendings(resPendings);
             setAccepted(resAccepted);
             setRejected(resRejected);
