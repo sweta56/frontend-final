@@ -1,0 +1,78 @@
+[
+    {
+        "Name" : "Dr. Deepa Chudal",
+        "Specialist" : "Obstetrics & Gynecologist",
+        "NMC number" : 9110,
+        "Profile" : "Consultant Gynecologist and Obstetrician at Nepal Police Hospital. Receiver of IAS Fellowship Award 2018, Amsterdam. Scholar and academician in Obstetrics and Gynecology. Assistant Professor of Obstetrics and Gynecology, Tribhuvan University",
+        "AvailableLocation" : [
+            {
+              "name" : "Nepal Police Hospital",
+              "location":"Maharajgunj , Kathmandu , Nepal"
+            }
+         ],
+         "Education" : [
+            {
+                 "name" : "Institute of Medicine",
+                 "Degree" : "MD ObGy",
+                 "year" : "2015"
+            }
+]
+    },
+    {
+        "Name" : "Dr. Swasti Sharma",
+        "Specialist" : "Gynaecologist and fertility specialist",
+        "NMC number" :  10028,
+        "Profile" : "Dr. Swasti Sharma, a senior obstetrician and gynecologists  has been trained from top fertility institutes within the world. Her journey began when she was really young. Now she's one among the foremost successful obstrecian and gynecologists in Nepal. Giving her client the simplest gift - their children . Most rewarding thing for Dr. Swasti is to ascertain her patient with children. She personally connects together with her patients and customize path for each one among them. She handles both local and international clients. Currently she may be a senior IVF specialist and also a general secretary of Fertility Society of Nepal .  She has been during this field for over five years training and learning from world's renowned institutions in Agra, Delhi, Mumbai, Goa, Korea and Mongolia. She completed her MBBS and MD from Nepalgunj Medical College (KU). She has several years experience and knowledge within the field of infertility and believes that employment is worship. Having strong medical principles and ethics, she treats her patients with utmost respect and care; taking note of their problems intently and providing them best counseling and treatment.",
+        "AvailableLocation" : [
+            {
+              "name" : "Greencity Hospital",
+              "location":"Dhapasi-8, Basundhara ,Kathmandu, Nepal"
+            }
+         ],
+         "Education" : [
+            {
+                 "name" : "Nepalgunj Medical College (KU)",
+                 "Degree" : "MBBS and MD",
+                 "year" : "2014"
+            }
+]
+    },
+    {
+        "Name" : "Dr.Gita Dhungana",
+        "Specialist" : "Obstetrics & Gynecologist",
+        "NMCnumber" : 4403,
+        "Profile" : "Dr. Gita Dhungana, a senior obstetrician and gynecologists  has been trained from top fertility institutes within the world. Her journey began when she was really young. Now she's one among the foremost successful obstrecian and gynecologists in Nepal",
+        "AvailableLocation" : [
+            {
+              "name" : "B&C Hospital and Research Center Pvt.Ltd",
+              "location":"Birtamode-5, Jhapa, Nepal"
+            }
+         ],
+         "Education" : [
+            {
+                 "name" : "University of Health Sciences, Lahore, Pak",
+                 "Degree" : "Masters of Surgery in Urology",
+                 "year" : "2014"
+            }
+]
+    },
+    {
+        "Name" : "Dr. Suresh Kayastha",
+        "Specialist" : "Gynecologic Oncologist",
+        "NMCnumber" : 11016,
+        "Profile" : "Dr. Suresh Kayastha, a senior obstetrician and gynecologists  has been trained from top fertility institutes within the world. His journey began when she was really young. Now she's one among the foremost successful obstrecian and gynecologists in Nepal",
+        "AvailableLocation" : [
+            {
+              "name" : "B&C Hospital and Research Center Pvt.Ltd",
+              "location":"Birtamode-5, Jhapa, Nepal"
+            }
+         ],
+         "Education" : [
+            {
+                 "name" : "University of Health Sciences, Lahore, Pak",
+                 "Degree" : "Masters of Surgery in Urology",
+                 "year" : "2014"
+            }
+]
+    }
+]
