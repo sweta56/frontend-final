@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {  useNavigate } from 'react-router-dom';
+import {  useNavigate,useLocation } from 'react-router-dom';
 
 import { fetcher } from "../lib/http"
 
@@ -9,6 +9,10 @@ const Form = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
 
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const id = location?.state?.id
+
 
 
     const phone =(event) => {
@@ -29,7 +33,7 @@ const Form = () => {
             const token = localStorage.getItem("token");
 
             const data = await fetcher(
-                `appointments/636746664b966f0c28656b02`, 
+                `appointments/${id}`, 
                 "POST", token, 
                 { 
                     patientPhone: phoneNumber,

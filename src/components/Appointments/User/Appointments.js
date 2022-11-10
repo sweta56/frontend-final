@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { fetcher } from "../../../lib/http";
 import AppointmentsList from "./appointments-list"
+import jwtDecode from 'jwt-decode'
 
 const Appointments = () => {
     const navigate = useNavigate();

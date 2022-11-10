@@ -13,7 +13,7 @@ const SocialCard = ({ userData }) => {
               <h2> NMC number: {userData.nmcc}</h2> 
                 <div className="card__image"><img src={logo}/></div>
                 
-                <Link to="/form">
+                <Link to="/form" state={{id:userData._id}}>
                      <button>Book Appointment</button>
                 </Link>
             </div>

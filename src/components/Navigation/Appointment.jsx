@@ -31,9 +31,17 @@ const Appointment = () => {
 
     return (
         <div className='flex flex-wrap ml-[300px]'>
+            {
+              users.map((user) => {
+                   console.log(user._id)
+              })
+            }
+
            {users.map((user,index)=>(
+           
            <SocialCard userData={user} key={index}/>
            ))}
+          
            
         </div>
         
