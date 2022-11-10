@@ -1,7 +1,9 @@
 import React, { useEffect, useState} from "react";
 import {fetcher} from '../../../lib/http';
+import authSlice from "../../../redux/slices/auth-slice";
 
 import DAppointmentsList from "./doctorapplist"
+import jwtDecode from "jwt-decode";
 
 
 const DoctorAppointments = () => {
@@ -13,33 +15,28 @@ const DoctorAppointments = () => {
     const [accepted,setAccepted] = useState([]);
     const [rejected,setRejected] = useState([]);
 
+    const [Flag,SetFlag] = useState(false);
+
 
     async function userData(){
 
     const request = await fetcher("appointments/", "GET",token)
-    console.log(request.appointments.rejected);
+    const {_id} = jwtDecode(localStorage.getItem('token'));
+    
 
-    const resPendings= request.appointments.pending.filter((data)=>data.doctor._id==="636746664b966f0c28656b02")
-    //console.log("resPendings",resPendings)
-
-    const resAccepted= request.appointments.accepted.filter((data)=>data.doctor._id==="636746664b966f0c28656b02")
-    const resRejected= request.appointments.rejected.filter((data)=>data.doctor._id==="636746664b966f0c28656b02")
+    const resPendings= request.appointments.pending.filter((data)=>data.doctor._id===_id)
+    const resAccepted= request.appointments.accepted.filter((data)=>data.doctor._id===_id)
+    const resRejected= request.appointments.rejected.filter((data)=>data.doctor._id===_id)
 
     setPendings(resPendings);
     setAccepted(resAccepted);
     setRejected(resRejected);
-   // console.log("pending",pending)
-    // console.log("appointments",request);
-    // console.log("pendings",pendings);
-    // console.log("accepted",accepted);
-    // console.log("rejected",rejected);
-//   const filterdata = Array.from(request).filter((user)=>user.role=="doctor")
-//   setUsers(filterdata);
+ 
 }
 
 useEffect(()=>{
     userData();
-},[]);
+},[Flag]);
 
     return (
         <div className="ml-[200px]">
@@ -51,6 +48,8 @@ useEffect(()=>{
                     list={pendings}
                     status="Pending"
                     role="user"
+                    Flag = {Flag}
+                    SetFlag = {SetFlag}
                 />
             </div>
 
@@ -59,6 +58,8 @@ useEffect(()=>{
                     list={accepted}
                     status="Approved"
                     role="user"
+                    Flag = {Flag}
+                    SetFlag = {SetFlag}
                 />
             </div>
 
@@ -67,6 +68,8 @@ useEffect(()=>{
                     list={rejected}
                     status="Rejected"
                     role="user"
+                    Flag = {Flag}
+                    SetFlag = {SetFlag}
                 />
             </div>
         </div>

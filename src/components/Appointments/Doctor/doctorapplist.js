@@ -1,7 +1,7 @@
 import React from "react";
 import DoctorAppointment from "./doctorpov"
 
-const DAppointmentsList = ({ list, role, status }) => {
+const DAppointmentsList = ({ list, role, status ,Flag,SetFlag }) => {
     return (
         <div className="w-[900px]">
             <h3 className="mb-1 mt-9  text-xl font-semibold text-gray-600">
@@ -16,6 +16,8 @@ const DAppointmentsList = ({ list, role, status }) => {
                         status = { status }
                         role = {role}
                         id = {id}
+                        Flag = {Flag}
+                        SetFlag = {SetFlag}
                     />
                     
                 );

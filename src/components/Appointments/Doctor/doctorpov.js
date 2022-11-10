@@ -1,7 +1,7 @@
 import React from "react";
 
 import { fetcher } from "../../../lib/http";
-const DoctorAppointment = ({ pending, index, status, role, id}) => {
+const DoctorAppointment = ({ pending, index, status, role, id,Flag,SetFlag}) => {
     const btnClassName = "px-3 py-1 rounded";
     const user = pending.patient
     const doctor = ''
@@ -12,14 +12,16 @@ const DoctorAppointment = ({ pending, index, status, role, id}) => {
         const token = localStorage.getItem('token');
         const appointmentId = id;
         fetcher(`appointments/${appointmentId}`,"PATCH",token,{accept:"acc"}).then((res) => {
-              window.location.reload();
+              //window.location.reload();
+              Flag ? SetFlag(false) : SetFlag(true)
         }).catch((e) => console.log(e));
     }
     const rejectAppointment=async(id)=>{
         const token = localStorage.getItem('token');
         const appointmentId = id;
         fetcher(`appointments/${appointmentId}`,"PATCH",token,{accept:"rej"}).then((res) => {
-              window.location.reload();
+              //window.location.reload();
+              Flag ? SetFlag(false) : SetFlag(true)
         }).catch((e) => console.log(e));
     }
 
@@ -27,7 +29,8 @@ const DoctorAppointment = ({ pending, index, status, role, id}) => {
         const token = localStorage.getItem('token');
         const appointmentId = id;
         fetcher(`appointments/${appointmentId}`,"DELETE",token,{appointmentId:id}).then((res) => {
-              window.location.reload();
+              //window.location.reload();
+              Flag ? SetFlag(false) : SetFlag(true)
         }).catch((e) => console.log(e));
     }
 
